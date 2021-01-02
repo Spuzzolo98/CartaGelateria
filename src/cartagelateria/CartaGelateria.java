@@ -67,12 +67,16 @@ public class CartaGelateria {
         
         switch(scelta){
             case "1": InsiemeCarte.add(inserimento());
-            break;
+        break;
             case "2": acquisto();   
-            break;
+        break;
             case "3": System.out.println("inserisci codice");
                       int temp = kek.nextInt();
-                      for(int i=0; i<InsiemeCarte)
+                      for(int i=0; i<InsiemeCarte.size();i++) 
+                          if(InsiemeCarte.get(i).getCodiceid()==temp)System.out.println("il tuo saldo punti è: "+InsiemeCarte.get(i).getCodiceid()+" punti");
+                          else System.out.println("codice non trovato!"); 
+        break;
+            case "4":
     }
 
 
