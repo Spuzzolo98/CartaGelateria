@@ -6,12 +6,37 @@ public class Carta {
     private String data="", nomeutente, cognomeutente;
     private int giornor, meser, annor, codiceid=1000000, puntitot, nreset;
 
+    public int getGiornor() {
+        return giornor;
+    }
+
+    public void setGiornor(int giornor) {
+        this.giornor = giornor;
+    }
+
+    public int getMeser() {
+        return meser;
+    }
+
+    public void setMeser(int meser) {
+        this.meser = meser;
+    }
+
+    public int getAnnor() {
+        return annor;
+    }
+
+    public void setAnnor(int annor) {
+        this.annor = annor;
+    }
+    
+    
     public String getData() {
         return data;
     }
 
-    public void setData(int giornorr, int meserr, int annorr) {
-        this.data = giornorr+"-"+meserr+"-"+annorr;
+    public void setData() {
+        this.data = this.giornor+"-"+this.meser+"-"+this.annor;
     }
 
     public String getNomeutente() {
@@ -60,6 +85,7 @@ public class Carta {
                     this.puntitot = this.puntitot - 21;
                 break;               
             }
+            this.nreset++;
             return true;
         }
         else
@@ -79,4 +105,11 @@ public class Carta {
         this.nomeutente = nomerr;
     }
     
+    public Carta(){
+        this.codiceid= 169420;
+        this.nomeutente = "Errore";
+        this.cognomeutente = "Errore";
+        this.data = "00-00-0000";
+        this.puntitot = 0;
+    } 
 }
